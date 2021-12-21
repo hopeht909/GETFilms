@@ -7,7 +7,7 @@
 
 import UIKit
 
-class GetPeople: UITableViewController {
+class GetPeopleViewController: UITableViewController {
     
     let movieApi = "https://swapi.dev/api/people/"
     
@@ -40,9 +40,7 @@ class GetPeople: UITableViewController {
             if let results = jsonResult["results"] as? [[String:Any]]{
             for result in results {
                 parsingMovieApi(dict: result)
-            }
-                
-            }
+            }}
         
     } catch {
         print(error.localizedDescription)
